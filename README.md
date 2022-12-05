@@ -1,13 +1,13 @@
 # Inventory-Management-System
-We are building a generic inventory system, for our project, that could be used for any business. 
+We built a generic inventory system, for our project, that could be used for any business. 
 The system can be customized for, or by, a business to suit their specific type of inventory.
 It can help to manage a business’ stock by keeping track of all inventory on hand,
-the rate at which the inventory is reduced,and suggested dates to reorder new stock.
+the rate at which the inventory is reduced, and suggest dates to reorder new stock.
 This allows the system to send alerts to warn of low inventory or reminders to place an order with a product vendor. 
 Alerts can also be generated to warn of vendor changes such as price changes or new products added. 
 The user can select specific inventory to generate an order to send out to product vendors and they can also generate reports with any pertinent information that the system stores about the inventory.
 
-# WHAT WE DID LAST TIME
+# WHAT WE DID AS A TEAM TO START
 1. Creates a product
 2. Stores the product on a file 
 3. Loads the file with the product everytime the program is run
@@ -15,14 +15,18 @@ The user can select specific inventory to generate an order to send out to produ
 5. Modify the quantity of products in the inventory
 6. Print the products that are running low
 
-# WHAT WE HAVE DONE THIS ITERATION
+# WHAT WE AS A TEAM AT THE END
 1. We migrated from the fileserver system to mySQL(Library) database to store the products
 2. In addition to the previous classes, we added two classes: Supplier class, User class and supply class
-3.We used the commons apache email library to send alerts to Users about products that are low in inventory
-4.We used the java preferences library to store the database connection credentials
-5.We created a graphical user interface using java swing library
+3. We used the commons apache email library to send alerts to Users about products that are low in inventory
+4. We used the java preferences library to store the database connection credentials
+5. We created a graphical user interface using java swing library
 6. We used the java time library to calculate the rate at which products are moving. This helps determine which stocks are moving fast and recalibrate what we will order next time
-7.We also generated reports for specific queries which we can send to vendors if need be
+7. We also generated reports for specific queries which we can send to vendors if need be
+
+# WHAT I (Kira) CHANGED/ADDED FOR MY INDIVIDUAL PROJECT
+1. I added pop-up alerts for low inventory, upon adding/modifying a product of enough inventory to hit the low inventory threshold.
+
 
 # Setting up the database
 1. Download docker desktop

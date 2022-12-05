@@ -81,7 +81,7 @@ public class addUser extends JFrame {
 					String password1="";
 					for(int i=0;i<password.length;i++)
 							password1+=password[i];
-					app.addUser(new User(textField.getText(),password1,textField_1.getText()));
+					app.addUser(new User(textField.getText(),textField_1.getText(),password1));
 					JOptionPane.showMessageDialog(null, "Successfull");
 					textField.setText("");
 					textField_1.setText("");

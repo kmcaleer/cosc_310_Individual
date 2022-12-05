@@ -114,6 +114,10 @@ public class Add extends JFrame {
 					app.connect();
 					app.addProduct(new Product(q,w,r,t));
 					JOptionPane.showMessageDialog(null,"Successful");
+				//Low inventory alert pop-up
+					if (t <100){
+					JOptionPane.showMessageDialog(null, "Low Inventory Warning!", "Warning", JOptionPane.WARNING_MESSAGE);
+					}
 					formattedTextField.setText("");
 					formattedTextField_1.setText("");
 					formattedTextField_2.setText("");

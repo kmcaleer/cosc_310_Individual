@@ -90,6 +90,10 @@ public class removeQuant extends JFrame {
 					w = Integer.parseInt(r);
 					app.modifyQuantity(q, w);
 					JOptionPane.showMessageDialog(null,"Successful");
+					//Low inventory alert pop-up
+					if (w <100){
+						JOptionPane.showMessageDialog(null, "Low Inventory Warning!", "Warning", JOptionPane.WARNING_MESSAGE);
+						}
 					textField.setText("");
 					textField_1.setText("");
 				} catch (SQLException e1) {
