@@ -25,7 +25,11 @@ The user can select specific inventory to generate an order to send out to produ
 7. We also generated reports for specific queries which we can send to vendors if need be
 
 # WHAT I (Kira) CHANGED/ADDED FOR MY INDIVIDUAL PROJECT
-1. I added pop-up alerts for low inventory, upon adding/modifying a product of enough inventory to hit the low inventory threshold.
+1. I added pop-up alerts for low inventory, upon adding/modifying a product of enough inventory to hit the low inventory threshold. (Add.java and removeQuant.java)
+2. I fixed the addUser function to store the users' emails and passwords in the correct spots.
+3. I added a 4th menu to the GUI and reorganized and cleaned up the menu options.
+3. I used Barbeque 1.5 API to add the option to create UPC barcodes (11 digits long) for products. (createBarcode.java)
+4. I then modified the Product class and the product table to store the barcodes after converting them as a BLOB.
 
 
 # Setting up the database

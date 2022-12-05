@@ -14,7 +14,8 @@ CREATE TABLE product (
  productName VARCHAR(50) NOT NULL,
  expiryDate DATE,
  quantity INTEGER,
- productValue DECIMAL,			
+ productValue DECIMAL,
+ barcode BLOB,			
  PRIMARY KEY (productName)
 ) ENGINE = InnoDB;
 

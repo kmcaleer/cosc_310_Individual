@@ -1,4 +1,5 @@
 package proj;
+import java.io.*;
 import java.sql.*;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -13,6 +14,8 @@ import javax.swing.JOptionPane;
 import org.apache.commons.mail.DefaultAuthenticator;
 import org.apache.commons.mail.Email;
 import org.apache.commons.mail.SimpleEmail;
+
+import net.sourceforge.barbecue.Barcode;
 
 public class db {
     private Connection con;
@@ -364,15 +367,13 @@ public class db {
 			// Set the hostname of the outgoing mail server 
 				email.setHostName("smtp.googlemail.com");
 			
-			
 			// Set the non-SSL port number of the outgoing mail server
-			email.setSmtpPort(465);
+				email.setSmtpPort(465);
+
 			// Set the Authenticator to the default when authentication is requested from the mail server.
-			//**Not sure if needed so commented out
-			email.setAuthenticator(new DefaultAuthenticator(userEmail, "kumberel16"));
+				email.setAuthenticator(new DefaultAuthenticator(userEmail, "kumberel16"));
 				
 			// Set whether SSL/TLS encryption should be enabled for the SMTP transport upon connection (SMTPS/POPS).
-			//**Not sure if needed so commented out
 				email.setSSLOnConnect(true);
 
 
@@ -494,6 +495,24 @@ public class db {
 			System.out.println(e);
 		}
 		return 0;
+
+	}
+
+	public void addBarcode(String productName, File png){
+		try{
+			String sql = "UPDATE product SET barcode=? WHERE productName=?";
+			PreparedStatement pstmt = con.prepareStatement(sql);
+			 //Inserting Blob type
+			InputStream in = new FileInputStream(png);
+			pstmt.setBlob(1, in);
+			pstmt.setString(2, productName);
+			pstmt.executeUpdate();
+			pstmt.close();
+			in.close();
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
 
 	}
 
