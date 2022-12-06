@@ -75,7 +75,7 @@ public class db {
 	public void addProduct(Product p){
 
 		try{
-			String sql = "INSERT INTO product VALUES (?,?,?,?)";
+			String sql = "INSERT INTO product VALUES (?,?,?,?,NULL)";
 			PreparedStatement pstmt = con.prepareStatement(sql);
 			pstmt.setString(1,p.getName());
 			pstmt.setDate(2,new Date(sdf.parse(p.getExpDate()).getTime()));

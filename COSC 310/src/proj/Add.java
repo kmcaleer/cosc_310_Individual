@@ -5,6 +5,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import com.mysql.cj.jdbc.Blob;
+
 import javax.swing.UIManager;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -23,6 +26,7 @@ public class Add extends JFrame {
 	public static String w = null;
 	public static int r = 0;
 	public static double t = 0.0;
+	public static Blob b = null;
 	private JPanel contentPane;
 	private JTextField textField;
 

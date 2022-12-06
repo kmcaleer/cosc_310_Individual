@@ -157,14 +157,6 @@ public class Options extends JFrame {
 		});
 		mnNewMenu_1.add(mntmNewMenuItem_11);
 
-		//JMenuItem mntmNewMenuItem_12 = new JMenuItem("Print Barcode");
-		//mntmNewMenuItem_12.addActionListener(new ActionListener() {
-		//	public void actionPerformed(ActionEvent e) {
-		//			BarcodeUPCA.main(null);
-		//	}
-	//	});
-	//	mnNewMenu_1.add(mntmNewMenuItem_12);
-
 	//Set up Report menu options	
 		JMenuItem mntmNewMenuItem_13 = new JMenuItem("List Product Inventory");
 		mntmNewMenuItem_13.addActionListener(new ActionListener() {

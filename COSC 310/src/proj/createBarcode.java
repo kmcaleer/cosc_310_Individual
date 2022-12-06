@@ -99,10 +99,18 @@ public class createBarcode extends JFrame{
                  }
 					app.connect();
 					app.addBarcode(pname, png);
+
 					JOptionPane.showMessageDialog(null,"Successful");
 					formattedTextField.setText("");
-                
-                
+
+                //Show new barcode    
+                    JFrame frame = new JFrame("New Barcode " + pname);
+                    frame.getContentPane().add(barcode);
+
+                    frame.pack();
+                    frame.setVisible(true);
+                    frame.setLocation(240, 90);
+
                 } catch (SQLException e1) {
 					formattedTextField.setText("");
 					JOptionPane.showMessageDialog(null, "Enter product name again", "Incorrect Types", JOptionPane.ERROR_MESSAGE);

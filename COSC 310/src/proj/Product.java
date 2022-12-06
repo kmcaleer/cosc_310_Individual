@@ -1,6 +1,8 @@
 package proj;
 
 import java.io.Serializable;
+
+import com.mysql.cj.jdbc.Blob;
 //import currentDateTime checker to check if holidays are coming up
 public class Product implements Serializable{
 	 private static final long serialVersionUID = 1L;
@@ -8,12 +10,14 @@ public class Product implements Serializable{
 	String expDate; //Changed date to string value,later improve with string patterns to check correct dates
 	 int quant;
 	 double value;
+	 Blob barcode;
 
 	Product(String name, String expDate, int quant, double value) {
 		this.name = name;
 		this.expDate = expDate;
 		this.quant = quant;
 		this.value = value;
+		barcode = null;
 	}
 
 	//generated the getters and setter again for the class attributes
